@@ -1,0 +1,7 @@
+img {
+  border: 0;
+  width: -moz-available;
+}
+i.icon, i.icons {
+    font-size: 1.5em;
+}
