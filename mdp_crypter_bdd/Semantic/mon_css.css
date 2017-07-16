@@ -1,0 +1,11 @@
+img {
+  border: 0;
+  width: -moz-available;
+}
+i.icon, i.icons {
+    font-size: 1em;
+}
+#form1
+{
+	margin-left: 0%;
+}
