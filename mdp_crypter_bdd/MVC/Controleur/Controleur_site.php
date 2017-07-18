@@ -38,9 +38,9 @@ class Controleur
   return $connexion;
 
  }
- public function selectUser()
+ public function selectAllArticle()
  {
-  $this->ModeleAffichage-> renseigner("utilisateurs");
+  $this->ModeleAffichage-> renseigner("Article");
   $connexion = $this->ModeleAffichage-> selectAll();
   
   return $connexion;
@@ -48,8 +48,14 @@ class Controleur
 
  public function Deconnecter()
  {
-    $deconnexion = $connexion = $this->ModeleAffichage-> seDeconnecter();
+    $deconnexion = $this->ModeleAffichage-> seDeconnecter();
     return $deconnexion;
+ }
+
+ public function rechercheA($nomArticle)
+ {
+  $recherche = $this->ModeleAffichage-> rechercheArticle($nomArticle);
+  return $recherche;
  }
 
 

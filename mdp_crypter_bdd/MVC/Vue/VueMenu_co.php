@@ -7,17 +7,19 @@ echo"<div class='ui blue inverted segment'>
         </a>
         <a class=item href='articles.php' id=articles>Articles</a>
         <div class='right menu'>
+        <form method=post action='articles.php'>
             <div class='item'>
                 <div class='ui icon input'>
-                    <input placeholder='chercher article' type='text'>
-                    <i class='search icon'></i>
+                    <input placeholder='chercher article' type='text' name='rch'>
+                      <button type='submit' name='search'><i class='search icon'></i></button>
                 </div>
-                </div>
+            </div>
+            </form>
          <div class='ui dropdown item'>
   			Menu <i class='dropdown icon'></i>
   				<div class='menu'>
     				<div class=item>Connecté : ".$_SESSION['nm']."</div>
-    				<form method=post action='index.php' ><div class=item><button type=submit  name=dec class='ui red button' > Deconnection </button></div></form>
+    				<form method=post action='Deconnection.php' ><div class=item><button type=submit  name=dec class='ui red button' > Deconnection </button></div></form>
   				</div>
 		</div>
 

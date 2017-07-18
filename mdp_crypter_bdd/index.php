@@ -72,11 +72,7 @@ else
 
 }
 
-if(isset($_POST['dec']))
-{
-    $controleur-> Deconnecter();
-    header("location: connexionUser.php");
-}
+
 
 
 include_once('Include/jsGeneral.php'); 

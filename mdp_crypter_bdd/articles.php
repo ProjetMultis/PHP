@@ -19,16 +19,31 @@
 
 </head>
 <body>
-	
 <?php 
 
 include_once('Include/MenuCo.php'); 
+include('MVC/Controleur/Controleur_site.php');
 
-if(isset($_POST['dec']))
+$controleur = new Controleur("localhost", "cryptMdp", "root", "");
+
+if(isset($_POST['search']))
 {
-    $controleur-> Deconnecter();
-    header("location: connexionUser.php");
+    $titre = $_POST['rch'];
+
+    $Articles = $controleur-> rechercheA($titre);
+
+    include_once("MVC/Vue/VueArticles.php");
+
+
 }
+else
+{
+    $Articles = $controleur-> selectAllArticle();
+
+    include_once("MVC/Vue/VueArticles.php");
+
+}
+
 ?>
 	
 
